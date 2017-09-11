@@ -9,7 +9,7 @@ import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 @Injectable()
 export class ProductService {
-    private _productURL = 'http://localhost:8080/products';
+    private _productURL = '/api/products';
     constructor(private _http: HttpClient) {
     }
 
