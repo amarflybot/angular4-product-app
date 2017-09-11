@@ -12,6 +12,8 @@ export class ProductDetailComponent implements OnInit {
 
   pageTitle = 'Product Details';
   product: IProduct;
+  imageWidth = 300;
+  imageMargin = 2;
 
   constructor(private _route: ActivatedRoute,
               private _productService: ProductService,
@@ -19,7 +21,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    let id: number = +this._route.snapshot.paramMap.get('id');
+    const id: number = +this._route.snapshot.paramMap.get('id');
     console.log(`Id Selected: ${id}`);
     this._productService.getProductById(id).subscribe(
       product => {

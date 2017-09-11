@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
-import { ProductService } from './products/products.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  providers: [ProductService]
+  providers: []
 })
 
 export class AppComponent {
